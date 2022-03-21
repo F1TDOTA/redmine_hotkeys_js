@@ -159,12 +159,12 @@
                     var focus_selector = issues_table + ' tbody tr';
                     var focused_selector = focus_selector + '.issue_focus';
                     //move issue selector by "ArrowDown" and "ArrowUp"
-                    if ((e.which == 38 || e.which == 40) && !e.ctrlKey && !e.altKey) {
+                    if ((e.which == 106 || e.which == 107) && !e.ctrlKey && !e.altKey) {
                         var to_focus;
                         if ($(focused_selector).length) {
-                            if (e.which == 38) //up
+                            if (e.which == 106) //up
                                 to_focus = $(focused_selector).prev();
-                            else if (e.which == 40) //down
+                            else if (e.which == 107) //down
                                 to_focus = $(focused_selector).next();
 
                             $(focused_selector).removeClass('issue_focus');
