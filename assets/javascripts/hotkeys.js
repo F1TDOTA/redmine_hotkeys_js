@@ -53,7 +53,7 @@
 
                 //active form submit
                 //ctrl + enter
-                if(e.ctrlKey && e.keyCode == 13){
+                if(e.altKey && e.keyCode == 13){
                     submitActiveForm();
                 }
 
@@ -77,7 +77,7 @@
                             }
                             break;
                         //issues list
-                        case 'i':
+                        case 'q':
                             $("li>a.issues").hrefRedirect();
                             break;
                         //wiki
@@ -159,12 +159,12 @@
                     var focus_selector = issues_table + ' tbody tr';
                     var focused_selector = focus_selector + '.issue_focus';
                     //move issue selector by "ArrowDown" and "ArrowUp"
-                    if ((e.which == 74 || e.which == 75) && !e.ctrlKey && !e.altKey) {
+                    if ((e.which == 38 || e.which == 40) && !e.ctrlKey && !e.altKey) {
                         var to_focus;
                         if ($(focused_selector).length) {
-                            if (e.which == 74) //up
+                            if (e.which == 38) //up
                                 to_focus = $(focused_selector).prev();
-                            else if (e.which == 75) //down
+                            else if (e.which == 40) //down
                                 to_focus = $(focused_selector).next();
 
                             $(focused_selector).removeClass('issue_focus');
